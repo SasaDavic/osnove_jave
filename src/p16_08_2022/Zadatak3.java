@@ -54,6 +54,8 @@ public class Zadatak3 {
 			System.out.println("Prekoracenje se nije desilo.");
 		}
 		
+		int z = auto.kazna(50);
+		System.out.println("kazna je " + z);
 		
 		
 	}
