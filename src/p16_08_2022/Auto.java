@@ -7,12 +7,19 @@ public class Auto {
 	public int brojVrata;
 	public double potrosnja;
 	public int brzina;
+	public int oldT;
+	public int godProizvodnje;
+	public int mesecRegistracije;
+	public int kubikaza;
+	public int trenutniMesec;
+	public int mesecIsteka;
+	
 	
 	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+	
 	}
 	
 	public void stampaj() {
@@ -38,7 +45,27 @@ public class Auto {
 		return 0;
 	}
 	
-	
-	
+	public boolean oldtimer(int godProizvodnje) {
+		if (godProizvodnje < this.oldT) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	public boolean registracija(int trenutniMesec) {
+		if (this.mesecIsteka < trenutniMesec) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+	public double cenaRegistracije(int kubikaza) {
+		if (this.kubikaza <= 2000) {
+			return this.kubikaza * 100;
+		} else {
+			return this.kubikaza * 100 * 1.3;
+		}
+		
+	}
 	
 }

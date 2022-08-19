@@ -39,6 +39,18 @@ public class Zadatak3 {
 //		toga vraca true ili false.
 //		metodu koja racuna i vraca cenu registracije za auto. Za automobile do 2000 kubika cena registracije
 //		kubikaza * 100din, za automobile preko 2000 kubika dodatno se uracunava 30% na cenu.
+		
+//		(Dopuna 3)
+//		Dopuniti klasu Auto tako da ima:
+//		atribut broj registracije
+//		da li je ukljucena klima u autu
+//		metodu dodajGas, koja povecava trenutnu brzinu za 10.
+//		metodu koci, koja smanjuje brzinu za 10. Brzina ne moze da ode ispod nule.
+//		metodu koja racuna i vraca trenutnu potrosnju auta. Metoda racuna po formuli:
+//		faktor klime - ako je ukljucena klima faktor je 1.2, ako nije ukljucena onda je 1.0
+//		(trenutna brzina / 100.0 * potrosnja na 100km) * faktor klime
+
+
 
 		Auto auto = new Auto();
 		auto.marka = "BMW";
@@ -46,6 +58,8 @@ public class Zadatak3 {
 		auto.brzina = 100;
 		auto.potrosnja = 5.0;
 		auto.brojVrata = 5;
+		auto.oldT = 1950;
+		auto.mesecIsteka = 8;
 		auto.stampaj();
 		
 		if (auto.prekoracenje(50) == true) {
@@ -55,7 +69,22 @@ public class Zadatak3 {
 		}
 		
 		int z = auto.kazna(50);
-		System.out.println("kazna je " + z);
+		System.out.println("Kazna je " + z + ".");
+		
+		boolean y = auto.oldtimer(1980);
+		if (y == true) {
+			System.out.println("Auto je oldtimer");
+		} else {
+			System.out.println("Auto nije oldtimer");
+		}
+		boolean x = auto.registracija(9);
+		if (x == true) {
+			System.out.println("Registracija nije istekla");
+		} else {
+			System.out.println("registracija je istekla");
+		}
+		double cena = auto.cenaRegistracije(200);
+		System.out.println("Cena registracije je " + cena);
 		
 		
 	}
