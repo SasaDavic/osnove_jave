@@ -83,7 +83,7 @@ public class Zadatak3 {
 		} else {
 			System.out.println("registracija je istekla");
 		}
-		double cena = auto.cenaRegistracije(200);
+		double cena = auto.cenaRegistracije(20000);
 		System.out.println("Cena registracije je " + cena);
 		
 		
