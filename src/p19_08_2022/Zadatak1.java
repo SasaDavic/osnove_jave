@@ -21,7 +21,7 @@ public class Zadatak1 {
 //			Drugi objekat preko konsuktora sa parametrima i postavite kooridnate na 30 i 40
 
 		Tacka t = new Tacka();
-		t.setX(10);
+		t.setX(10); //za diforltni konstruktor setujemo koordinate
 		t.setY(20);
 		t.print();
 		

@@ -9,24 +9,24 @@ public class Tacka {
 	private int x;
 	private int y;
 	
-	public Tacka() {
+	public Tacka() { //difoltni konstruktor- vrednosti su 0,0
 		
 	}
-	public Tacka(int x, int y) {
+	public Tacka(int x, int y) { //kostruktor koji prima dve vrednosti
 		this.x = x;
 		this.y = y;
 	}
 	
-	public void setX(int x) {
+	public void setX(int x) { //seter
 		this.x = x;
 	}
-	public void setY(int y) {
+	public void setY(int y) { //seter
 		this.y = y;
 	}
-	public int getX() {
+	public int getX() { //geter - vraca x, nema vrednost
 		return this.x;
 	}
-	public int getY() {
+	public int getY() { //geter - vraca y
 		return y;
 	}
 	public void print() {
