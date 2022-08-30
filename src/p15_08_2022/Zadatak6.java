@@ -12,14 +12,25 @@ public class Zadatak6 {
 //		Ako se metoda pozove za N = 9, metoda stampa 9 zvezdica i enter
 //		N=9, print je=> * * * * * * * * * 
 
-		printN(5);
+		
+		printZvezda(5);
+		printPiramida(5);
 		
 		
 	}
-	public static void printN(int brZvezda) {
+	public static void printZvezda(int brZvezda) {
 		for (int i = 0; i < brZvezda; i++) {
 			System.out.print("* ");
+		} System.out.println();
+	}
+	
+	public static void printPiramida(int brZvezda) {
+		
+		for (int j = 1; j <= brZvezda; j++) {
+			for (int i = 0; i < j; i++) {
+				System.out.print("* ");
+			}
+			System.out.println();
 		}
-		System.out.println();
 	}
 }

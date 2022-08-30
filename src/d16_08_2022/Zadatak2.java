@@ -22,15 +22,24 @@ public class Zadatak2 {
 		klima1.temperatura = 25.0;
 		klima1.mod = "hladi";
 		klima1.stampaj();
-		System.out.println(klima1.temp(30));
+//		System.out.println(klima1.temp(30));
+		if (klima1.temp(30) == true) {
+			System.out.println("Napolju je veca temperatura.");
+		} else {
+			System.out.println("Napolju nije veca temperatura.");
+		}
 		
 		klima2.marka = "Gree";
 		klima2.temperatura = 35.0;
 		klima2.mod = "greje";
 		klima2.stampaj();
-		System.out.println(klima2.temp(30));
+//		System.out.println(klima2.temp(30));
 		
-		
+		if (klima2.temp(30) == true) {
+			System.out.println("Napolju je veca temperatura.");
+		} else {
+			System.out.println("Napolju nije veca temperatura.");
+		}
 		
 		
 		

@@ -9,6 +9,8 @@ public class Zadatak4 {
 //		nekoliko puta funkciju sa razlicitim prosledjenim vrednostima. 
 		
 		printOperacije(10, 5);
+		printOperacije(20, 2);
+		printOperacije(7, 3);
 
 	}
 	

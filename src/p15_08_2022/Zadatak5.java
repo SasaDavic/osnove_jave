@@ -8,14 +8,17 @@ public class Zadatak5 {
 //		Napisati metodu stampajApsolutnuVrednost, koja stampa apsolutnu vrednost  
 //		prosledjene vrednosti.
 		
-		printApsolutno(-9);
+		stampajApsolutno(-1);
+		stampajApsolutno(10);
+		stampajApsolutno(-5);
 
 	}
-	public static void printApsolutno(int a) {
-		int b = a;
+	public static void stampajApsolutno(int a) {
 		if (a < 0) {
-		b = b * (-1);
+			System.out.println("Apsolutna vrednost je " + (-a));
+		} else {
+			System.out.println("Apsolutna vrednost je " + a);
+		}
 	}
-	System.out.println("Apsolutna vrednost je " + b);
-	
-}}
+
+}

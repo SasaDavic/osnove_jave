@@ -25,7 +25,6 @@ public class Zadatak1 {
 		Proizvod jogurt = new Proizvod();
 		jogurt.ime = "Balans";
 		jogurt.cena = 102.50;
-		jogurt.cenaSaPopustom = jogurt.cena;
 		jogurt.tezina = 83.6;
 	
 		jogurt.stampaj();
@@ -33,17 +32,18 @@ public class Zadatak1 {
 		jogurt.povecajCenu(10);
 		System.out.println("Nakon poskupljenja cena je " + jogurt.cena);
 		
+
 		jogurt.vratiCenuSaPopustom(15);
-		System.out.println("Nakon popusta cena je "  + jogurt.cenaSaPopustom);
+		System.out.println("Nakon popusta cena je "  + jogurt.vratiCenuSaPopustom(15));
+		
 		jogurt.racunajPostarinu();
-		System.out.println("Postarina je " + jogurt.postarina);
+		System.out.println("Postarina je " + jogurt.racunajPostarinu());
 		
 		
 		
 		Proizvod mleko = new Proizvod();
 		mleko.ime = "Moja Kravica";
 		mleko.cena = 200;
-		mleko.cenaSaPopustom = mleko.cena;
 		mleko.tezina = 150.02;
 		
 		mleko.stampaj();
@@ -52,18 +52,15 @@ public class Zadatak1 {
 		System.out.println("Nakon poskupljenja cena je " + mleko.cena);
 		
 		mleko.vratiCenuSaPopustom(25);
-		System.out.println("Nakon popusta cena je "  + mleko.cenaSaPopustom);
+		System.out.println("Nakon popusta cena je "  + mleko.vratiCenuSaPopustom(25));
+		
 		mleko.racunajPostarinu();
-		System.out.println("Postarina je " + mleko.postarina);
+		System.out.println("Postarina je " + mleko.racunajPostarinu());
 		
 		
 		
 
 	}
 
-	private static double vratiCenuSaPopustom(int i) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 }

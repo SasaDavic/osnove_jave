@@ -16,8 +16,8 @@ public class Zadatak7 {
 		
 	}
 	public static int suprotno(int a) {
-		int b = -1 * a;
-		return b;
+		a *= -1;
+		return a;
 	}
 	
 	

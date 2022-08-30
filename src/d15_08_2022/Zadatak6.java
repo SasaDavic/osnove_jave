@@ -14,17 +14,16 @@ public class Zadatak6 {
 //		Napomena: Resiti bez koriscenja petlji.
 
 		
-		int broj = brojac(50, 43);
+		int broj = brojac(10, 4);
 		System.out.println("Rezultat je " + broj);
 		
 	}
 	public static int brojac(int x, int y) {
-		int rezultat = 0;
 		if (x <= y) {
-			rezultat = y - x - 1;
+			return y - x - 1;
 		} else {
-			rezultat = x - y - 1;
+			return x - y - 1;
 		}
-		return rezultat;
+		
 	}
 }

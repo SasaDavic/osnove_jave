@@ -10,12 +10,19 @@ public class Zadatak2 {
 //		Primer poziva: Ako se metoda pozvoe za ime=”Milan” i prezime=”Jovanovic”, 
 //		metoda vraca “Milan Jovanovic”
 		
-		String x = PunoIme("Sasa", "Davic");
+		String x = punoIme("Sasa", "Davic");
 		System.out.println("Puno ime je " + x);
+		
+		//ili
+		
+		String ime = "Sasa";
+		String prezime = "Davic";
+		String punoIme1 = punoIme(ime, prezime);
+		System.out.println(punoIme1);
 		
 
 	}
-	public static String PunoIme(String ime, String prezime) {
+	public static String punoIme(String ime, String prezime) {
 		return ime + " " + prezime;
 	}
 

@@ -1,11 +1,11 @@
 package p15_08_2022;
 
-
+import java.util.Scanner;
 
 public class Zadatak10 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 //		Napisati funkciju koja vrsi konverziju eura u dinare, 
 //		rublje ili dolare prema dole navedenoj konverziji. 
 //		Metoda od parametara prima vrednost u eurima kao i valutu u 
@@ -23,20 +23,24 @@ public class Zadatak10 {
 //		1 EUR = 1.1 USD
 //		1 EUR = 62.98 RUB
 		
-		double iznos = 50;
-		double rsd = menjacnica(iznos, "RSD");
-		System.out.println(rsd);
+		Scanner s = new Scanner(System.in);
+		System.out.print("Unesite vrednost u eurima koju zelite da konvertujete: ");
+		int eur = s.nextInt();
+		System.out.print("Unesite valutu za konverziju(RSD/USD/RUB): ");
+		String valuta = s.next();
+		double vrednost = konverzija(eur, valuta);
+		System.out.println(eur + " EUR je " + vrednost + " " + valuta);
 		
 	}
-	public static double menjacnica(double iznos, String valuta) {
+	public static double konverzija(int eur, String valuta) {
 		if (valuta.equals("RSD")) {
-			return iznos * 117.5;
+			return eur * 117.5;
 		} else if (valuta.equals("USD")) {
-			return iznos * 1.1;
+			return eur * 1.1;
 		} else if (valuta.equals("RUB")) {
-			return iznos * 62.98;
+			return eur * 62.98;
 		}
-		return 0;
+		return eur;
 	}
 	
 }

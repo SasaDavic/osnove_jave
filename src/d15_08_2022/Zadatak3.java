@@ -11,10 +11,10 @@ public class Zadatak3 {
 //		ako je prvi broj =6, a drugi =2 vraca novu vrednost 62.
 
 		String n = novaVrednost(3, 6);
-		System.out.println("Nova vrednost je" + n);
+		System.out.println("Nova vrednost je " + n);
 		
 	}
 	public static String novaVrednost(int x, int y) {
-		return " " + x + y;
+		return x + "" + y;
 	}
 }

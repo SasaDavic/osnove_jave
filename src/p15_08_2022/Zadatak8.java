@@ -9,18 +9,34 @@ public class Zadatak8 {
 //		u suptrotnom vraca false.
 //		Trougao je pravougli ukoliko je a*a+b*b=c*c
 		
-		boolean pravougli = pitagora(3, 4, 8);
-		System.out.println("Trougao je pravougli: " + pravougli);
-		
-	}
-	public static boolean pitagora(int a, int b, int c) {
-		boolean z;
-		if (a*a + b*b == c*c) {
-			z = true;
+		boolean prav = pravougli(2, 3, 4);
+		if (prav == true) {
+			System.out.println("Trougao je pravougli");
 		} else {
-			z = false;
+			System.out.println("Nije pravougli");
 		}
 		
-		return z;
+		boolean prav1 = pravougli(3, 4, 5);
+		if (prav1 == true) {
+			System.out.println("Trougao je pravougli");
+		} else {
+			System.out.println("Nije pravougli");
+		}
+		
+		
 	}
+//	public static boolean pravougli(int a, int b, int c) {
+//		if (a*a + b*b == c*c) {
+//			return true;
+//		} else {
+//			return false;
+//		}
+//	}
+	
+		//LEPSI NACIN
+	
+	public static boolean pravougli(int a, int b, int c) {
+		return (a*a + b*b == c*c) ? true : false;
+	}
+	
 }

@@ -29,7 +29,7 @@ public class Zadatak2 {
 //			Likes 3 | Shares 1
 		
 		FacebookPost prvi = new FacebookPost();
-		prvi.korisnikObjava = "Milan Jovanovic";
+		prvi.korisnikObjava = "Mika Antic";
 		prvi.korisnikProfil = "Pera Peric";
 		prvi.textObjave = "Ovo je tekst objave";
 		prvi.brLajkova = 3;
@@ -56,6 +56,7 @@ public class Zadatak2 {
 		drugi.like();
 		drugi.dislike();
 		drugi.share();
+		
 		drugi.print();
 		
 		

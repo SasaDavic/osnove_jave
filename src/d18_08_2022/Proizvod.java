@@ -4,8 +4,8 @@ public class Proizvod {
 	public String ime;
 	public double cena;
 	public double tezina;
-	public double cenaSaPopustom;
-	public int postarina = 0;
+	
+	
 	
 
 	public void stampaj() {
@@ -15,15 +15,15 @@ public class Proizvod {
 ////	Ova funkcija treba da menja atribut cena i ova funkcija nema povratnu vrednost.
 
 		public void povecajCenu(double poskupljenje) {
-			this.cena = this.cena + poskupljenje;
+			this.cena += poskupljenje;
 		}
 		
 //		vratiCenuSaPopustom - koja kao ulazni parametar funkcije dobija popust, a povratnu vrednost je 
 //		cena proizvoda kada se uračuna popust.Ova funkcije ne menja atribut cena. Smatrati da je parametar 
 //		popust u opsegu od 0 do 100.
 		
-		public void vratiCenuSaPopustom(int popust) {
-			this.cenaSaPopustom = this.cena - (this.cena * popust * 0.01);
+		public double vratiCenuSaPopustom(int popust) {
+			return this.cena - this.cena * popust / 100;
 		}
 		
 //		racunajPostarinu - funkcije vraća koliko bi bila postarina da se proizvod šalje preko kurirske sluzbe.
@@ -32,14 +32,14 @@ public class Proizvod {
 //			za tezinu od 101g do 500g, postarina iznosi 400din
 //			za tezinu preko 500g, postarina iznosi 1000din
 		
-		public void racunajPostarinu() {
+		public int racunajPostarinu() {
 			
 			if (this.tezina < 101) {
-				this.postarina = 200;
+				return 200;
 			} else if (this.tezina < 501) {
-				this.postarina = 400;
+				return 400;
 			} else {
-				this.postarina = 1000;
+				return 1000;
 			}
 		}
 		

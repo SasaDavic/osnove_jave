@@ -3,17 +3,14 @@ package d16_08_2022;
 public class Zadatak1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 //		Napisati klasu Proizvod koja ima atribute
 //		naziv proizvoda (String)
 //		cenu proizvoda (double)
 //		težinu proizvoda u gramima. (double)
 //			i metode:
 //		stampaj - stampa podatke proizvoda u formatu {{naziv}}, {{cena}}, {{tezina}}
-//		
-		
-//		konvertuj - metoda konvertuje tezinu u kilograme i tone. Metoda kao parametar prima jedinicu u koju zelimo da konvertujemo, 
-//		a metoda vraca sracunatu vrednost. Jedinica moze biti “kg” ili “t”
+//		konvertuj - metoda konvertuje tezinu u kilograme i tone. Metoda kao parametar prima jedinicu u 
+//		koju zelimo da konvertujemo, a metoda vraca sracunatu vrednost. Jedinica moze biti “kg” ili “t”
 //		Primer: ako proizvod ima 1200 grama i pozovemo metodu sa parametrom kg, metoda vraca 1.200
 //		Primer: ako proizvod ima 12000 grama i pozovemo metodu sa parametrom t, metoda vraca 0.012
 //
@@ -21,28 +18,33 @@ public class Zadatak1 {
 //		U glavnom programu kreirati minimum 2 proizvoda i za svaki od njih pozvati metode
 
 		Proizvod proizvod1 = new Proizvod();
-		proizvod1.naziv = "jogurt";
+		proizvod1.naziv = "Jogurt";
 		proizvod1.cena = 150;
-		proizvod1.gram = 100.10;
+		proizvod1.tezinaG = 93.6;
+		proizvod1.stampaj();
 		
 		Proizvod proizvod2 = new Proizvod();
-		proizvod2.naziv = "mleko";
-		proizvod2.cena = 200;
-		proizvod2.gram = 150.95;
-		
-		proizvod1.stampaj();
+		proizvod2.naziv = "Prase";
+		proizvod2.cena = 16580;
+		proizvod2.tezinaG = 30000;
 		proizvod2.stampaj();
 		
-		System.out.print("ako proizvod ima " + proizvod1.gram + " grama i pozovemo metodu sa parametrom kg, metoda vraca ");
-		System.out.println(proizvod1.konverzija("kg"));
-		System.out.print("ako proizvod ima " + proizvod1.gram + " grama i pozovemo metodu sa parametrom t, metoda vraca ");
-		System.out.println(proizvod1.konverzija("t"));
-		System.out.print("ako proizvod ima " + proizvod2.gram + " grama i pozovemo metodu sa parametrom kg, metoda vraca ");
-		System.out.println(proizvod2.konverzija("kg"));
-		System.out.print("ako proizvod ima " + proizvod2.gram + " grama i pozovemo metodu sa parametrom t, metoda vraca ");
-		System.out.println(proizvod2.konverzija("t"));
+		System.out.print("Ako proizvod " + proizvod1.naziv + " ima " + proizvod1.tezinaG + " g, i pozovemo metodu sa parametrom kg");
+		System.out.println(", metod vraca " + proizvod1.konvertuj("kg") + " kg");
 		
-
+		System.out.print("Ako proizvod " + proizvod1.naziv + " ima " + proizvod1.tezinaG + " g, i pozovemo metodu sa parametrom t");
+		System.out.println(", metod vraca " + proizvod1.konvertuj("t") + " t");
+		
+		System.out.print("Ako proizvod " + proizvod2.naziv + " ima " + proizvod2.tezinaG + " g, i pozovemo metodu sa parametrom kg");
+		System.out.println(", metod vraca " + proizvod2.konvertuj("kg") + " kg");
+		
+		System.out.print("Ako proizvod " + proizvod2.naziv + " ima " + proizvod2.tezinaG + " g, i pozovemo metodu sa parametrom t");
+		System.out.println(", metod vraca " + proizvod2.konvertuj("t") + " t");
+		
+		
+		
+		
+		
 		
 		
 	}

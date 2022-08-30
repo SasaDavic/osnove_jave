@@ -1,33 +1,34 @@
 package d16_08_2022;
 
 public class Proizvod {
-	
+//	Napisati klasu Proizvod koja ima atribute
 //	naziv proizvoda (String)
 //	cenu proizvoda (double)
 //	težinu proizvoda u gramima. (double)
-	
+//		i metode:
+//	stampaj - stampa podatke proizvoda u formatu {{naziv}}, {{cena}}, {{tezina}}
+//	konvertuj - metoda konvertuje tezinu u kilograme i tone. Metoda kao parametar prima jedinicu u 
+//	koju zelimo da konvertujemo, a metoda vraca sracunatu vrednost. Jedinica moze biti “kg” ili “t”
+//	Primer: ako proizvod ima 1200 grama i pozovemo metodu sa parametrom kg, metoda vraca 1.200
+//	Primer: ako proizvod ima 12000 grama i pozovemo metodu sa parametrom t, metoda vraca 0.012
+//
 	public String naziv;
 	public double cena;
-	public double gram;
-	public Object konvertuj;
+	public double tezinaG;
 	
 	public void stampaj() {
-		System.out.println("Proizvod: " + this.naziv + ", " + this.cena + " din, " + this.gram + " g");
+		System.out.println(this.naziv + ", " + this.cena + " din, " + this.tezinaG + " g");
+	}
+	public double konvertuj(String jedinica) {
+		if (jedinica.equals("kg")) {
+			return this.tezinaG / 1000;
+		} else if (jedinica.equals("t")) {
+			return this.tezinaG / 1000000;
+		}
+		return tezinaG;
 	}
 	
-	public double konverzija(String jedinica) {
-		if (jedinica.equals("kg")) {
-			return (this.gram / 1000);
-		} else if (jedinica.equals("t")) {
-			return (this.gram / 10000);
-		}
-		return 0;
-	}
-
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+	
+	
+	
 }

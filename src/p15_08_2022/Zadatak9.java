@@ -14,25 +14,27 @@ public class Zadatak9 {
 //		Kao parametar se unosi vrednost rimkog broja(string) a vraca se arapski (int).
 //		Ako se unese V vraca se 5.
 		
-		int arapski = konverzija("V");
-		System.out.println("Arapski zapis broja je " + arapski);
+		int a = arapski("III");
+		System.out.println("Arapski zapis broja je " + a);
+		
+		int b = arapski("r");
+		System.out.println("Arapski zapis broja je " + b);
 		
 		
 	}
-	public static int konverzija(String rimski) {
-		int arapski = 0;
+	public static int arapski(String rimski) {
 		if (rimski.equals("I")) {
-			arapski = 1;
+			return 1;
 		} else if (rimski.equals("II")) {
-			arapski = 2;
+			return 2;
 		} else if (rimski.equals("III")) {
-			arapski = 3;
+			return 3;
 		} else if (rimski.equals("IV")) {
-			arapski = 4;
+			return 4;
 		} else if (rimski.equals("V")) {
-			arapski = 5;
+			return 5;
 		}
-		return arapski;
+		return 0;
 	}
 
 }

@@ -12,26 +12,18 @@ public class Zadatak3 {
 //		*  *  
 //		*  
 		
-		printZvezda();
-		printRazmak();
-		printZvezda();
-		printRazmak();
-		printZvezda();
-		printRazmak();
-		System.out.println();
-		printZvezda();
-		printRazmak();
-		printZvezda();
-		printRazmak();
-		System.out.println();
-		printZvezda();
-		
-		
+		for (int j = 0; j < 3; j++) {
+			for (int i = 3 - j; i > 0; i--) {
+				stampajZvezdu();
+			}
+			stampajLn();
+		}
+			
 	}
-	public static void printZvezda() {
-		System.out.print("*");
+	public static void stampajZvezdu() {
+		System.out.print("* ");
 	}
-	public static void printRazmak() {
-		System.out.print(" ");
+	public static void stampajLn() {
+		System.out.println();
 	}
 }
