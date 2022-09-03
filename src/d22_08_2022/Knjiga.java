@@ -62,6 +62,7 @@ public class Knjiga {
 		System.out.println(this.isbn);
 		System.out.println(this.naziv + " - " + this.godIzdanja);
 		System.out.println("autor: " + this.autor.getIme() + " " + this.autor.getPrezime());
+		autor.print(); //drugi nacin za prethodni red
 	}
 	
 }
