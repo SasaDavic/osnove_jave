@@ -3,7 +3,6 @@ package p19_08_2022;
 public class Zadatak1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 //		Za klasu Tacka, koja ima privatne atribute:
 //			x - x koordinata
 //			y - y koordinata
@@ -21,14 +20,13 @@ public class Zadatak1 {
 //			Drugi objekat preko konsuktora sa parametrima i postavite kooridnate na 30 i 40
 
 		Tacka t = new Tacka();
-		t.setX(10); //za diforltni konstruktor setujemo koordinate
+		t.setX(10);
 		t.setY(20);
-		t.print();
+		t.stampaj();
 		
 		Tacka m = new Tacka(30, 40);
-		System.out.println(m.getX() + "..." + m.getY());
-		m.print();
-		
+		m.stampaj();
+		System.out.println("Tacka je (" + t.getX() + ", " + t.getY() + ")");
 		
 		
 	}

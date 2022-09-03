@@ -3,7 +3,6 @@ package p19_08_2022;
 public class Zadatak2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 //		Zad Kreirati klasu Radnik koja ima:
 //			jmbg radnika
 //			ime i prezime
@@ -34,16 +33,22 @@ public class Zadatak2 {
 //			- (VII stepen) Fakultetsko, odnosno visoko obrazovanje - Bechelor, koeficijent: 3,40;
 //			- (VIII stepen) Doktorat nauka, koeficijent: 4,12.
 
-		Radnik x = new Radnik("123456790");
-		x.setJmbg("123456789");
-				
-				
-		Radnik y = new Radnik("Pera Peric", 3, 4, 20, 15, 6, 56000, false);
 		
-		x.print();
-		y.print();
+		Radnik stefan = new Radnik("123654789", "Stefan Stefanovic", 5, "IV", 15);
+		System.out.println("Minuli rad je " + stefan.minuliRad());
+		System.out.println("KS je " + stefan.koeficijentSlozenosti());
+		System.out.println("Stefanova plata je " + stefan.racunajPlatu() + 
+				" din, pa na osnovu toga zakljucijemo da je on kreditno sposoban: " + stefan.kreditnoSposoban());
+		
+		Radnik milan = new Radnik("879456123", "Milan Milanovic", 2, "VII", 5);
+		System.out.println("Minuli rad je " + milan.minuliRad());
+		System.out.println("KS je " + milan.koeficijentSlozenosti());
+		System.out.println("Stefanova plata je " + milan.racunajPlatu() + 
+				" din, pa na osnovu toga zakljucijemo da je on kreditno sposoban: " + milan.kreditnoSposoban());
+		
+		
+		
+
 	}
-
-
 
 }

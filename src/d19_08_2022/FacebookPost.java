@@ -1,72 +1,65 @@
 package d19_08_2022;
 
 public class FacebookPost {
-	private String korisnikObjavio;
+//	Kreirati klasu FacebookPost koja ima:
+//	   Od atributa:
+//	ime i prezime korisnika koji je objavio post
+//	ime i prezime korisnika na kom je profilu objavljen post (posto na fejsbuku mozete da postavite 
+//			objavu na tudjem profilu)
+//	tekst objave
+//	broj lajkova
+//	broj deljenja
+//	 Konstruktore:
+//	difoltni konstuktor
+//	konstuktor koji postavlja ime i prezime korisnika ko je objavio, korisnika na kom je profilu 
+//	objavnljen i tekst objave
+
+	private String korisnikObjava;
 	private String korisnikProfil;
-	private String text;
-	private int likes;
-	private int share;
+	private String textObjave;
+	private int brLajkova;
+	private int brDeljenja;
 	
-	public FacebookPost() { //difoltni konstruktor
-		
+	public FacebookPost() {
+		this.brLajkova = 0;
+		this.brDeljenja = 0;
 	}
-	public void setKorisnikObjavio(String korisnikObjavio) {
-		this.korisnikObjavio = korisnikObjavio;
-	}
-	public void setKorisnikProfil(String korisnikProfil) {
+
+	public FacebookPost(String korisnikObjava, String korisnikProfil, String textObjave) {
+		this.korisnikObjava = korisnikObjava;
 		this.korisnikProfil = korisnikProfil;
-	}
-	public void setText(String text) {
-		this.text = text;
-	}
-	public void setLikes1(int likes) {
-		this.likes = likes;
-	}
-	public void setShares1(int share) {
-		this.share = share;
+		this.textObjave = textObjave;
 	}
 	
-	public String grtKorisnikObjavio(String korisnikObjavio) {
-		return this.korisnikObjavio;
-	}
-	public String getKorisnikProfil(String korisnikProfil) {
-		return this.korisnikProfil;
-	}
-	public String getText(String text) {
-		return this.text;
-	}
-	public int setLikes(int likes) {
-		return this.likes = likes;
-	}
-	public int setShares(int share) {
-		return this.share = share;
+//	  Od metoda:
+//	like(), koja povecava broj lajkova za 1.
+//	dislike(), koja smanjuje broj lajkova za 1 (broj lajkova ne moze da bude manji od nule)
+//	share(), koja povecava broj deljenja za 1
+
+	
+	public void like() {
+		this.brLajkova += 1;
 	}
 	
-	
-	public FacebookPost(String korisnikObjavio, String korisnikProfil, String text, int likes, int share) {
-		this.korisnikObjavio = korisnikObjavio;
-		this.korisnikProfil = korisnikProfil;
-		this.text = text;
-		this.likes = likes;
-		this.share = share;
-	}
-	public void addLike() {
-		this.likes++;
-	}
 	public void dislike() {
-		this.likes--;
-	}
-	public void addShare() {
-		this.share++;
+		this.brLajkova -= 1;
+		if (this.brLajkova < 0) {
+			this.brLajkova = 0;
+		}
 	}
 	
+	public void share() {
+		this.brDeljenja += 1;
+	}
+//	print(), koja stampa objavu u formatu:
 //	(ime i prezime osobe koja je objavila) >>> (ime i prezime na cijem profilu)
-////	(tekst objave)
-////	Likes (broj lajkova) | Shares (broj deljenja)
+//	(tekst objave)
+//	Likes (broj lajkova) | Shares (broj deljenja)
+	
 	public void print() {
-		System.out.println(this.korisnikObjavio + " >>> " + this.korisnikObjavio);
-		System.out.println(this.text);
-		System.out.println("Likes " + this.likes + " | Shares " + this.share);
+		System.out.println(this.korisnikObjava + " >>> " + this.korisnikProfil);
+		System.out.println(this.textObjave);
+		System.out.println("Likes " + this.brLajkova + " | Shares" + this.brDeljenja);
 	}
 	
 	

@@ -31,16 +31,27 @@ public class Zadatak1 {
 //			Milan Jovanovic >>> Pera Peric
 //			Ovo je tekst objave
 //			Likes 3 | Shares 1
-		FacebookPost o1 = new FacebookPost();
-		o1.setKorisnikObjavio("Pera Peric");
-		o1.setKorisnikProfil("Dunja Stevic");
-		o1.setText("Zdravo, zdravo!");
-		o1.setLikes1(15);
-		o1.setShares1(2);
-		o1.print();
 		
-		FacebookPost o2 = new FacebookPost("Jagoda", "Visnja", "Kako si?", 150, 10);
-		o2.print();
+		FacebookPost zorica = new FacebookPost("Zorica", "Dragica", "Kako si mila?");
+		zorica.like();
+		zorica.like();
+		zorica.like();
+		zorica.like();
+		zorica.like();
+		zorica.like();
+		zorica.dislike();
+		zorica.share();
+		zorica.share();
+		zorica.print();
+		
+		FacebookPost milica = new FacebookPost("Milica", "Dragisa", "Zdravo, zdravo!");
+		milica.dislike();
+		milica.share();
+		milica.share();
+		milica.like();
+		milica.like();
+		milica.like();
+		milica.print();
 		
 
 
