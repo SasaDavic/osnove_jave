@@ -12,14 +12,14 @@ public class ZoomCall {
 	
 	private String link;
 	private String password;
-	private Korisnik korisnik;
+	private Korisnik host;
 	private Korisnik guest;
 	
 	
-	public ZoomCall(String link, String password, Korisnik korisnik, Korisnik guest) {
+	public ZoomCall(String link, String password, Korisnik host, Korisnik guest) {
 		this.link = link;
 		this.password = password;
-		this.korisnik = korisnik;
+		this.host = host;
 		this.guest = guest;
 	}
 	public Korisnik getGuest() {
@@ -35,7 +35,7 @@ public class ZoomCall {
 		return password;
 	}
 	public Korisnik getKorisnik() {
-		return korisnik;
+		return host;
 	}
 	//metodu pokreni poziv koja stampa podatke u formatu:
 //	Zoom Call: url
@@ -49,9 +49,9 @@ public class ZoomCall {
 	public void pokreniPoziv() {
 		System.out.println("Zoom Call: " + this.link);
 		System.out.println("Password: " + this.password);
-		System.out.println("Host: " + this.korisnik.getImeIPrezime());
+		System.out.println("Host: " + this.host.getImeIPrezime());
 		System.out.println("Guest: " + this.guest.getImeIPrezime());
-		System.out.println("Maksimalno trajanje poziva je " + this.korisnik.maksimalnDuzinuTrajanjaVPoziva());
+		System.out.println("Maksimalno trajanje poziva je " + this.host.maksimalnDuzinuTrajanjaVPoziva());
 	}
 	
 	

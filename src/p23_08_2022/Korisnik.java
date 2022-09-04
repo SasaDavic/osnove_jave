@@ -6,17 +6,12 @@ public class Korisnik {
 //		tip licence (basic/pro/premium)
 //		konstruktore. Po difoltu korisnik ima basic licencu.
 //		gettere i settere za sve atribute, sem za tip licence koja ne moze da se menja
-//		metodu pretplati se koja postavlja licencu u zavisnosi od uplacene sume:
-//		ako je uplata 100, postavlja licencu na “pro”
-//		ako je uplata 150, postavlja licencu na “premium”
-//		Metoda kao parametar prima vrednost uplate $100 ili $150
-//		metodu ponisti pretplatu koja postavlja licencu na basic
-
 	
 	private String imeIPrezime;
-	private String tipLicence = "basic";
+	private String tipLicence;
 	
 	public Korisnik() {
+		this.tipLicence = "basic";
 	}
 
 	public String getImeIPrezime() {
@@ -26,6 +21,12 @@ public class Korisnik {
 	public void setImeIPrezime(String imeIPrezime) {
 		this.imeIPrezime = imeIPrezime;
 	}
+//	metodu pretplati se koja postavlja licencu u zavisnosi od uplacene sume:
+//	ako je uplata 100, postavlja licencu na “pro”
+//	ako je uplata 150, postavlja licencu na “premium”
+//	Metoda kao parametar prima vrednost uplate $100 ili $150
+//	metodu ponisti pretplatu koja postavlja licencu na basic.
+	
 	public void pretplatiSe(int uplata) {
 		if (uplata == 100) {
 			this.tipLicence = "pro";

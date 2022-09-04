@@ -8,6 +8,7 @@ public class Zadatak1 {
 //
 		Korisnik host = new Korisnik();
 		host.setImeIPrezime("Korisnik HOST");
+		host.pretplatiSe(150);
 		
 		Korisnik guest = new Korisnik();
 		guest.setImeIPrezime("Korisnik GUEST");

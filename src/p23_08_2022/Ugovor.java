@@ -7,15 +7,7 @@ public class Ugovor {
 //		osobu koja kupuje nekretninu (fizicko lice)
 //		cenu za koju se prodaje nekretnina
 //		adresu nekretnine (ulica br., grad)
-//		metodu koja vraca procenat zarade
-//		za osobu koja je vec kupovale nekretninu preko agencije je 0.02 dok je za one koji nisu 0.03
-//		metodu koja racuna zaradu agencije pri prodaji nekretninte koja ukljucujei poreze, 
-//		takse i usluge agencije, prema formuli:
-//		1000 + cena za koju se prodaje * procenat zarade
-//		metodu koja stampa ugovor u formatu:
-//		Dana (dan.mesec.godina.)god sklopljen je ugovor izmedju (print prodavca) i (print kupca) o 
-//		kupovini nekretnine (adresa) po ceni od (cena nekretnin) pri cemu je kupac u obavezi da agenciji 
-//		isplati novcanu vrednost u iznosu od (zarada agencije)
+
 	
 	private int godina;
 	private int mesec;
@@ -54,20 +46,51 @@ public class Ugovor {
 		this.adresaNekretnine = adresaNekretnine;
 	}
 
+	public FizickoLice getProdavac() {
+		return prodavac;
+	}
+
+	public void setProdavac(FizickoLice prodavac) {
+		this.prodavac = prodavac;
+	}
+
+	public FizickoLice getKupac() {
+		return kupac;
+	}
+
+	public void setKupac(FizickoLice kupac) {
+		this.kupac = kupac;
+	}
+
+//	metodu koja vraca procenat zarade
+//	za osobu koja je vec kupovale nekretninu preko agencije je 0.02 dok je za one koji nisu 0.03
+//	metodu koja racuna zaradu agencije pri prodaji nekretninte koja ukljucujei poreze, 
+//	takse i usluge agencije, prema formuli:
+//	1000 + cena za koju se prodaje * procenat zarade
+//	metodu koja stampa ugovor u formatu:
+//	Dana (dan.mesec.godina.)god sklopljen je ugovor izmedju (print prodavca) i (print kupca) o 
+//	kupovini nekretnine (adresa) po ceni od (cena nekretnin) pri cemu je kupac u obavezi da agenciji 
+//	isplati novcanu vrednost u iznosu od (zarada agencije)
+	
 	public double procenatZarade() {
 		if (this.kupac.isPrvaKupovina() == true) {
-			return 1000 + this.cenaNekretnine * 0.03;
+			return 0.03;
 		} else {
-			return 1000 + this.cenaNekretnine * 0.02;
+			return 0.02;
 		}
+	}
+	public double zaradaAgencije() {
+		double x = 1000 + this.procenatZarade() * this.cenaNekretnine;
+		return x;
 	}
 	public void stampajUgovor() {
 		System.out.println("Dana " + this.dan + "." + this.mesec + "." + this.godina + 
 				".god. sklopljen je ugovor izmedju " + this.prodavac.getImeIPrezime() + " i " +
-				this.kupac.getImeIPrezime()  + " o kupovini nekretnine " + this.adresaNekretnine +
+				this.kupac.getImeIPrezime()  + " o kupovini nekretnine ");
+		System.out.println(this.adresaNekretnine +
 				" po ceni od " + this.cenaNekretnine + 
 				" pri cemu je kupac u obavezi da agenciji isplati novcanu vrednost u iznosu od " +
-				this.procenatZarade());
+				this.zaradaAgencije());
 	}
 
 
