@@ -44,10 +44,56 @@ public class Zadatak1 {
 		karton8.stampaj();
 		karton9.stampaj();
 		
+		System.out.print("Prosecna osena za sve ispite je: ");
+		double prosek = (karton0.getOcena() + karton1.getOcena() + karton2.getOcena() + karton3.getOcena() +
+				karton4.getOcena() + karton5.getOcena() + karton6.getOcena() + karton7.getOcena() +
+				karton8.getOcena() + karton9.getOcena()) / 10;
+		System.out.println(prosek);
+		System.out.print("Prosecna osena za polozene ispite je: ");
+		double suma = 0;
+		int brojac = 0;
+		if (karton0.polozenIspit() == true) {
+			brojac++;
+			suma += karton0.getOcena();
+		}
+		if (karton1.polozenIspit() == true) {
+			brojac++;
+			suma += karton1.getOcena();
+		}
+		if (karton2.polozenIspit() == true) {
+			brojac++;
+			suma += karton2.getOcena();
+		}
+		if (karton3.polozenIspit() == true) {
+			brojac++;
+			suma += karton3.getOcena();
+		}
+		if (karton4.polozenIspit() == true) {
+			brojac++;
+			suma += karton4.getOcena();
+		}
+		if (karton5.polozenIspit() == true) {
+			brojac++;
+			suma += karton5.getOcena();
+		}
+		if (karton6.polozenIspit() == true) {
+			brojac++;
+			suma += karton6.getOcena();
+		}
+		if (karton7.polozenIspit() == true) {
+			brojac++;
+			suma += karton7.getOcena();
+		}
+		if (karton8.polozenIspit() == true) {
+			brojac++;
+			suma += karton8.getOcena();
+		}
+		if (karton9.polozenIspit() == true) {
+			brojac++;
+			suma += karton9.getOcena();
+		}
 		
-		
-		
-		
+		System.out.println(suma / brojac);
 		
 		
 		

@@ -1,65 +1,54 @@
 package d23_08_2022;
 
 public class Racun {
-//	// Kreirati klasu Racun koja ima:
+//	Kreirati klasu Racun koja ima:
 //	broj racuna (npr: 170-289328923-23)
 //	ime i prezime osobe
 //	trenutno stanje na racunu (npr: 100, 1220)
 //	gettere i setter za sve atribute, sem settera za stanje na racunu
-
 	
 	private String broj;
-	private String ImeOsobe;
-	private int stanje;
+	private String vlasnik;
+	private double stanje;
 	
-	
-	///konstruktor
-	
-	public String getBroj() {
-		return broj;
-	}
-	public Racun(String broj, String imeOsobe, int stanje) {
+	public Racun(String broj, String vlasnik, double stanje) {
 		
 		this.broj = broj;
-		ImeOsobe = imeOsobe;
+		this.vlasnik = vlasnik;
 		this.stanje = stanje;
+	}
+	public String getBroj() { 
+		return broj;
 	}
 	public void setBroj(String broj) {
 		this.broj = broj;
 	}
-	public String getImeOsobe() {
-		return ImeOsobe;
+	public String getVlasnik() {
+		return vlasnik;
 	}
-	public void setImeOsobe(String imeOsobe) {
-		ImeOsobe = imeOsobe;
+	public void setVlasnik(String vlasnik) {
+		this.vlasnik = vlasnik;
 	}
-	public int getStanje() {
+	public double getStanje() {
 		return stanje;
 	}
-	
-//	metodu koja menja stanje na racunu za prosledjenu vrednost (stanje na racunu ne moze da bude manje od nule)
+//	metodu koja menja stanje na racunu za prosledjenu vrednost 
+//	(stanje na racunu ne moze da bude manje od nule)
 //	metodu koja stampa podatke o racunu u formatu:
 //	Ime i prezime  -  broj racuna
 //	stanje na racunu je (trenutno stanje) rsd.
 	
-	public int promenaStanja(int promena) {
-		this.stanje = this.stanje + promena;
-		if (this.stanje <= 0) {
-			this.stanje = this.stanje - promena;
-			System.out.println("Nemate dovoljno novca na racunu");
+	public void promenaStanja(double promenaNaRacunu) { //mora da se naglasni - ili + tj da li se skida novac ili uplacuje
+		if (this.stanje + promenaNaRacunu <= 0) {
+			this.stanje = 0;
+		} else {
+			this.stanje += promenaNaRacunu;
 		}
-		return stanje;
 	}
 	public void print() {
-		System.out.println(this.ImeOsobe + " - " + this.broj);
+		System.out.println(this.vlasnik + " - " + this.broj);
 		System.out.println("Stanje na racunu je " + this.stanje + " rsd.");
 	}
 	
 	
-	
-	
 }
-	
-	
-	
-

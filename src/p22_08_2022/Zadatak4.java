@@ -16,7 +16,8 @@ public class Zadatak4 {
 		player.pojacaj();
 		player.premotajUnapred();
 		player.iscitaj();
-	
+		System.out.println(player.sherovanje());
+		
 	}
 
 }
