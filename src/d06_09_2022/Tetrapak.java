@@ -34,6 +34,14 @@ public class Tetrapak extends Ambalaza{
 //	ako nije u cenu ulazi samo osnovna cena
 //	metoda stampaj stampa sve podatke iz klase tetrapak.
 	
+	public void setReciklaza(boolean reciklaza) {
+		this.reciklaza = reciklaza;
+	}
+
+	public void setOsnovnaCena(double osnovnaCena) {
+		this.osnovnaCena = osnovnaCena;
+	}
+
 	public double cena() {
 		if (this.reciklaza == true) {
 			return this.tezinaPakovanja() * 1.5 * this.osnovnaCena;

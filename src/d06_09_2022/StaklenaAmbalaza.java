@@ -20,6 +20,18 @@ public class StaklenaAmbalaza extends Ambalaza{
 		this.osnovnaCena = osnovnaCena;
 	}
 
+	public void setKaucijaFlasa(double kaucijaFlasa) {
+		this.kaucijaFlasa = kaucijaFlasa;
+	}
+
+	public void setDaLiPlacateKauciju(boolean daLiPlacateKauciju) {
+		this.daLiPlacateKauciju = daLiPlacateKauciju;
+	}
+
+	public void setOsnovnaCena(double osnovnaCena) {
+		this.osnovnaCena = osnovnaCena;
+	}
+
 	public StaklenaAmbalaza() {
 		// TODO Auto-generated constructor stub
 	}

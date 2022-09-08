@@ -28,9 +28,19 @@ public class Korpa {
 //	prima Super karticu iz koje se cita popust.
 	
 	
-
+	private double cenuSvihAmbalazaSaPopustom(double popust) {
+		double s = 0;
+		for (int i = 0; i < this.niz.size(); i++) {
+			s += this.niz.get(i).cena();
+		}
+		return s - popust;
+	}
 	
-	
+	public double ukupnaCenuKorpe (SuperKartica superKartica) {
+		double p = superKartica.getPopust();
+		System.out.println("Racun: " + this.cenuSvihAmbalazaSaPopustom(p));
+		return this.cenuSvihAmbalazaSaPopustom(p);
+	}
 	
 	
 	

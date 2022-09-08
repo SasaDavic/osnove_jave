@@ -55,6 +55,43 @@ public class Zadatak1 {
 //			U glavnom programu kreirati jednu Korpu i u nju dodati nekoliko Ambalaza razlicitih tipova i istestirati 
 //			sve metode i ispisati ukupnu cenu sa popustom.
 
+		
+		Tetrapak t1 = new Tetrapak("789 456321 123", "Slag krem", 180, 200);
+		t1.setOsnovnaCena(436);
+		t1.setReciklaza(true);
+		t1.stampaj();
+		System.out.println();
+		Tetrapak t2 = new Tetrapak("741 852963 123", "Joya Soja Drink", 250, 230);
+		t2.setOsnovnaCena(540);
+		t2.setReciklaza(false);
+		t2.stampaj();
+		System.out.println();
+
+		StaklenaAmbalaza s1 = new StaklenaAmbalaza("963 123456 789", "Belo vino", 750, 800);
+		s1.setDaLiPlacateKauciju(true);
+		s1.setKaucijaFlasa(50);
+		s1.setOsnovnaCena(800);
+		s1.stampaj();
+		System.out.println();
+		
+		SuperKartica s = new SuperKartica("0125", "Sara", 500);
+		s.stampaj();
+		
+		Korpa korpa = new Korpa();
+		korpa.dodajAmbalazu(s1);
+		korpa.dodajAmbalazu(t1);
+		korpa.dodajAmbalazu(t2);
+		
+		korpa.ukupnaCenuKorpe(s);
+		
+		korpa.izbaciAmbalazu("963 123456 789");
+		korpa.ukupnaCenuKorpe(s);
+		
+		korpa.izbaciAmbalazu("741 852963 123");
+		korpa.ukupnaCenuKorpe(s);
+		
+		
+		
 	}
 
 }
