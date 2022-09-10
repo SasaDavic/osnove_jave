@@ -78,6 +78,27 @@ public class Zadatak3 {
 //			Jacina: jacina
 //			Grejac: jacina grejaca kW
 
+		
+		Ringla gL = new Ringla("ekspres", 1.5);
+		Ringla gD = new Ringla("ekspres", 1.5);
+		Ringla dL = new Ringla("obicna", 1);
+		Ringla dD = new Ringla("obicna", 0.8);
+		
+		ElektricniSporet bosh = new ElektricniSporet("Bosh", 3, 2);
+		bosh.setDoleD(dD);
+		bosh.setDoleL(dL);
+		bosh.setGoreD(gD);
+		bosh.setGoreL(gL);
+		
+		bosh.pojacaj(2);
+		bosh.pojacaj(1);
+		
+		System.out.println("Ukupna potrosnja je " + bosh.ukupnaPotrosnja(5));
+		bosh.stampaj();
+		
+		
+		
+		
 
 	}
 

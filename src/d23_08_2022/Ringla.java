@@ -14,6 +14,7 @@ public class Ringla {
 	private String tip;
 	private int jacina;
 	private double jacinaGrejaca;
+	
 	public Ringla() {
 		this.jacina = 0;
 	}
@@ -77,7 +78,7 @@ public class Ringla {
 	
 	public void stampaj() {
 		if (this.on_off() == false) {
-			System.out.println("Ringla je ugasena");
+			System.out.println("Ringla je iskljucena");
 		} else {
 			System.out.println("Ringla je ukljucena");
 		}
